@@ -27,3 +27,8 @@ constructor(private http: HttpClient){
   })
 }
 ````
+
+# Récupérer data selon l'_id dans MongoDB :
+````
+// app.js
+db.collection('users').findOne({ _id: ObjectId(`${req.params.id}`)}
