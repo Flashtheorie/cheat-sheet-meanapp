@@ -32,3 +32,11 @@ constructor(private http: HttpClient){
 ````
 // app.js
 db.collection('users').findOne({ _id: ObjectId(`${req.params.id}`)}
+````
+
+# Déclarer une session dans un component :
+````
+// ***.component.ts
+sessionStorage.setItem('name', 'Antoine');
+````
+
