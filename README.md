@@ -76,3 +76,36 @@ app.post('/register', function(req, res){
         password : req.body.password
     })
 })
+
+````
+
+
+# Récupérer l'_id de l'user qui vient d'être crée :
+````
+app.post('/register', function(req, res){
+     db.collection('users').insertOne({
+        prenom : req.body.prenom,
+        nom: req.body.nom,
+        email : req.body.email,
+        password : req.body.password,
+        solde : 0,
+        economies : 0
+    }, function(err, user){
+        res.json(user.insertedId)
+    })
+
+})
+
+````
+
+
+````
+register(){
+    this.http.post('http://localhost:3001/register', this.input)
+        .subscribe(result => {
+          console.log(result);
+        })
+}
+
+
+```
