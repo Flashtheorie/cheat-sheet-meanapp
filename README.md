@@ -40,3 +40,39 @@ db.collection('users').findOne({ _id: ObjectId(`${req.params.id}`)}
 sessionStorage.setItem('name', 'Antoine');
 ````
 
+# Passer la valeur d'un input vers nodeJS :
+````
+<input type="text" name="nom" placeholder="Nom de famille" [(ngModel)]="input.nom">
+````
+````
+  input: any = {
+    prenom: "",
+    nom: "",
+    email: "",
+    password: "",
+};
+
+register(){
+    this.http.post('http://localhost:3001/register', this.input)
+        .subscribe(
+          (            next: any) => {
+                // TO-DO Success event
+                console.log('success')
+            },
+          (            error: any) => {
+                // TO-DO Error event
+                console.log('error')
+            });
+}
+````
+
+````
+
+app.post('/register', function(req, res){
+    db.collection('users').insertOne({
+        prenom : req.body.prenom,
+        nom: req.body.nom,
+        email : req.body.email,
+        password : req.body.password
+    })
+})
