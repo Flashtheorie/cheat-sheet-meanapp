@@ -98,7 +98,7 @@ app.post('/register', function(req, res){
 
 ````
 
-# Full registerComponent :
+
 ````
 register(){
     this.http.post('http://localhost:3001/register', this.input)
@@ -108,10 +108,10 @@ register(){
 }
 
 
-```
+````
+# Full registerComponent :
 
-
-```
+````
 
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -145,4 +145,7 @@ constructor(public http: HttpClient){
 }
 
 }
+````
+
+
 
