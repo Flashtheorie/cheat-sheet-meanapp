@@ -147,5 +147,23 @@ constructor(public http: HttpClient){
 }
 ````
 
+# Display a rank and update the rank :
 
+````
+db.collection('websites').find({}).sort({  "points": -1 }).forEach(doc => {
+
+  rank++;
+  doc.rank = rank;
+  //delete doc._id;
+  //console.log(doc._id);
+
+  db.collection('websites').updateOne({_id : doc._id},
+    { $set: { rank: doc.rank } },
+    { upsert: true }
+)
+
+})
+````
+
+````
 
