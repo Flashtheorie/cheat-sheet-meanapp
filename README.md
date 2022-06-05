@@ -167,3 +167,29 @@ db.collection('websites').find({}).sort({  "points": -1 }).forEach(doc => {
 
 
 
+# Get data from URL :
+
+````
+routes : 
+{ path: 'product/:id', component: ProductComponent, canActivate: [AuthGuard]},
+
+.ts : 
+import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+@Component({
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
+})
+export class ProductComponent implements OnInit {
+
+  constructor(private route: ActivatedRoute) {
+    console.log(this.route.snapshot.params["id"]) // <------ this
+  }
+
+  ngOnInit(): void {
+  }
+
+}
+````
+
