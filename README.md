@@ -223,5 +223,4 @@ app.get('/api/gains/totaux', function(req, res){
 # Modifier toutes les données d'un coup
 ````
 db.users.updateMany({}, { $set: { premium: 0 } })
-
 ````
