@@ -193,3 +193,29 @@ export class ProductComponent implements OnInit {
 }
 ````
 
+# Additionner des datas
+````
+
+app.get('/api/gains/totaux', function(req, res){
+    db.collection('gains').aggregate([
+        {
+            $group: {
+              _id: null,
+              total: {
+                $sum: "$amount"
+              }
+            }
+          }
+      ]).toArray(function(err, result){
+            
+            if(err){
+                res.send(err)
+            }
+            else{
+                res.json(result)
+                
+            }
+        }
+    )}
+);
+
