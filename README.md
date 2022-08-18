@@ -1,11 +1,11 @@
 ### Cheat Sheet personnel pour une application MEAN Stack
 
 # Table des matières :
-<ul>
-    <li>[Récupérer les données de la BDD MongoDB](#fetchdatabdd)</li>
-    <li>[Récupérer les données de l'api](#fetchdataapi)</li>
-    
-</ul>
+
+[Récupérer les données de la BDD MongoDB](#fetchdatabdd) <br
+[Récupérer les données de l'api](#fetchdataapi)
+[Récupérer data selon l'_id dans MongoDB](#fetchdataselonlapi)  
+[Déclarer une session dans un component](#declaresessioninacomponent)  
 # <a name="fetchdatabdd">Récupérer les données de la BDD MongoDB</a> :
 ````
 // app.js
@@ -33,13 +33,13 @@ constructor(private http: HttpClient){
 }
 ````
 
-# Récupérer data selon l'_id dans MongoDB :
+# <a name="fetchdataselonlapi">Récupérer data selon l'_id dans MongoDB :</a>
 ````
 // app.js
 db.collection('users').findOne({ _id: ObjectId(`${req.params.id}`)}
 ````
 
-# Déclarer une session dans un component :
+# <a name="declaresessioninacomponent">Déclarer une session dans un component :</a>
 ````
 // ***.component.ts
 sessionStorage.setItem('name', 'Antoine');
