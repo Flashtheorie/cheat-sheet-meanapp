@@ -9,7 +9,7 @@
 
 <hr>
 <a name="fetchdatabdd"> # Récupérer les données de la BDD MongoDB</a> :
-````
+```
 // app.js
 app.get('/api/films', function(req, res){
     db.collection('movies').find({ type : "Film"}).sort({ nbVotes: -1 }).toArray(function(err, users){
@@ -18,7 +18,7 @@ app.get('/api/films', function(req, res){
     })
 })
 
-````
+```
 # <a name="fetchdataapi">Récupérer les données de l'api :</a>
 ````
 // app.component.ts
