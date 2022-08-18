@@ -8,7 +8,7 @@
 [Déclarer une session dans un component](#declaresessioninacomponent)  <br>
 
 <hr>
-# <a name="fetchdatabdd">Récupérer les données de la BDD MongoDB</a> :
+<a name="fetchdatabdd"> # Récupérer les données de la BDD MongoDB</a> :
 ````
 // app.js
 app.get('/api/films', function(req, res){
