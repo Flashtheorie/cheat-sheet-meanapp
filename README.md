@@ -1,15 +1,9 @@
 ### Cheat Sheet personnel pour une application MEAN Stack
 
-# Table des matières :
 
-[Récupérer les données de la BDD MongoDB](#fetchdatabdd) <br>
-[Récupérer les données de l'api](#fetchdataapi) <br>
-[Récupérer data selon l'_id dans MongoDB](#fetchdataselonlapi)   <br>
-[Déclarer une session dans un component](#declaresessioninacomponent)  <br>
 
-<hr>
-<a name="fetchdatabdd"> # Récupérer les données de la BDD MongoDB</a> :
-```
+# Récupérer les données de la BDD MongoDB :
+````
 // app.js
 app.get('/api/films', function(req, res){
     db.collection('movies').find({ type : "Film"}).sort({ nbVotes: -1 }).toArray(function(err, users){
@@ -18,8 +12,8 @@ app.get('/api/films', function(req, res){
     })
 })
 
-```
-# <a name="fetchdataapi">Récupérer les données de l'api :</a>
+````
+# Récupérer les données de l'api :
 ````
 // app.component.ts
 export class AppComponent {
@@ -35,13 +29,13 @@ constructor(private http: HttpClient){
 }
 ````
 
-# <a name="fetchdataselonlapi">Récupérer data selon l'_id dans MongoDB :</a>
+# Récupérer data selon l'_id dans MongoDB :
 ````
 // app.js
 db.collection('users').findOne({ _id: ObjectId(`${req.params.id}`)}
 ````
 
-# <a name="declaresessioninacomponent">Déclarer une session dans un component :</a>
+# Déclarer une session dans un component :
 ````
 // ***.component.ts
 sessionStorage.setItem('name', 'Antoine');
