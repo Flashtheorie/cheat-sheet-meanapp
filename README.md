@@ -224,3 +224,8 @@ app.get('/api/gains/totaux', function(req, res){
 ````
 db.users.updateMany({}, { $set: { premium: 0 } })
 ````
+
+#  This condition will always return True/False
+````
+*ngIf="!(photosliked | keyvalue)?.length"
+````
