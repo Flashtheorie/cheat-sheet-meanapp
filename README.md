@@ -2,10 +2,12 @@
 
 # Table des matières :
 
-[Récupérer les données de la BDD MongoDB](#fetchdatabdd) <br
-[Récupérer les données de l'api](#fetchdataapi)
-[Récupérer data selon l'_id dans MongoDB](#fetchdataselonlapi)  
-[Déclarer une session dans un component](#declaresessioninacomponent)  
+[Récupérer les données de la BDD MongoDB](#fetchdatabdd) <br>
+[Récupérer les données de l'api](#fetchdataapi) <br>
+[Récupérer data selon l'_id dans MongoDB](#fetchdataselonlapi)   <br>
+[Déclarer une session dans un component](#declaresessioninacomponent)  <br>
+
+<hr>
 # <a name="fetchdatabdd">Récupérer les données de la BDD MongoDB</a> :
 ````
 // app.js
