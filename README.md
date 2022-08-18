@@ -1,8 +1,11 @@
 ### Cheat Sheet personnel pour une application MEAN Stack
 
 # Table des matières :
-[Récupérer les données de la BDD MongoDB](#fetchdatabdd)
-[Récupérer les données de l'api](#fetchdataapi)
+<ul>
+    <li>[Récupérer les données de la BDD MongoDB](#fetchdatabdd)</li>
+    <li>[Récupérer les données de l'api](#fetchdataapi)</li>
+    
+</ul>
 # <a name="fetchdatabdd">Récupérer les données de la BDD MongoDB</a> :
 ````
 // app.js
